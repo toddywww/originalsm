@@ -35,7 +35,12 @@ If you don't have experience with programming, it is important that you alter on
 <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
 <script src="shortcut.js"></script>
 <script src="main.js"></script>
-<script type="text/javascript" src="profiles.json"></script>
+fetch('profiles.json')
+  .then(response => response.json())
+  .then(data => {
+    // 处理数据
+  })
+  .catch(error => console.error('Error loading JSON:', error));
 
 </head>
 
